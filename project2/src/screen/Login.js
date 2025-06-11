@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Login() {
+   const BACKEND_URL = process.env.REACT_APP_URL;
 
   const [crendintial, setcrendintial] = useState({ email: "", password: "" })
   let navigate = useNavigate();
 
   const dbSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/loginuser", {
+    const response = await fetch(`${BACKEND_URL}/loginuser`, {
       method: 'post',
       headers: {
         "Content-Type": "application/json"

@@ -3,13 +3,13 @@ import Navbar1 from '../component/Navbar1'
 import Footer from '../component/Footer'
 
 export default function MyOrder() {
-
+       const BACKEND_URL = process.env.REACT_APP_URL;
     const [orderData, setorderData] = useState({})
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
         try {
-            const response = await fetch("http://localhost:5000/api/myorderData", {
+            const response = await fetch(`${BACKEND_URL}/myorderData`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

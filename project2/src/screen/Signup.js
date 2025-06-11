@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 
 
 export default function Signup() {
+     const BACKEND_URL = process.env.REACT_APP_URL;
+
   const [crendintial, setcrendintial]= useState({name:"",email:"", password:"", geolocation:""})
   
   const dbSubmit = async(e)=> {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/creatuser",{
+    const response = await fetch(`${BACKEND_URL}/creatuser`,{
       method:'post',
       headers:{
         "Content-Type":"application/json"
@@ -18,7 +20,7 @@ export default function Signup() {
     
     
     
-    console.log(userData);
+    // console.log(userData);
     if(!userData.success){
       alert("Enter valid carenditial");
     }

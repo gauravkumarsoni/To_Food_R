@@ -6,12 +6,14 @@ import Card1 from '../component/Card1'
 
 
 
+
 export default function Home() {
+  const BACKEND_URL = process.env.REACT_APP_URL;
   const [search, setsearch] = useState("");
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
   const loadData = async () => {
-    let response = await fetch("http://localhost:5000/api/foodData", {
+    let response = await fetch(`${BACKEND_URL}/foodData`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

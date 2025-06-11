@@ -3,6 +3,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useCart, useDispatchCart } from '../component/ContextReducer';
 
 export default function Cart() {
+   const BACKEND_URL = process.env.REACT_APP_URL;
   const data = useCart();
   const dispatch = useDispatchCart();
 
@@ -13,7 +14,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     const userEmail = localStorage.getItem("userEmail");
 
-    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/orderData`, {
+    const response = await fetch(`${BACKEND_URL}/orderData`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
