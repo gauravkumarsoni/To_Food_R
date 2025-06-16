@@ -9,7 +9,7 @@ const MONGO_URL = process.env.MONGO_URL;
 
 const mongoDb = async () => {
     // const MONGO_URL = process.env.MONGO_URL;S
-    // console.log(MONGO_URL);
+    console.log(MONGO_URL);
     try {
         await mongoose.connect(MONGO_URL, {
 
