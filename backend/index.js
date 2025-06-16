@@ -23,7 +23,7 @@ mongoDb();
 // });
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://tofoodrestaurants.netlify.app', 'https://elegant-creponne-624e2d.netlify.app/'],
+  origin: ['http://localhost:3000', 'https://tofoodrestaurants.netlify.app', 'https://tofoodrestaurant.netlify.app'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
