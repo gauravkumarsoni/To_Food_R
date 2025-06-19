@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useDispatchCart, useCart } from './ContextReducer'
+import { useDispatchCart, useCart } from './ContextReducer';
+import '../App.css';
+
 
 
 export default function Card1(props) {
@@ -44,9 +46,9 @@ export default function Card1(props) {
 
 
   return (
-    <div>
+    <div className="flex-body container">
       <div className="card mt-3" style={{ width: "18.5rem", maxHeight: "4000px" }}>
-        <img className="card-img-top" src={props.foodItem.img} style={{ height: "150px", objectFit: "fill" }} alt="Nature" />
+        <img className="card-img-top img-fluid" src={props.foodItem.img} style={{ height: "150px", objectFit: "fill" }} alt="Nature" />
         <div className="card-body">
           <h5 className='card-title'>{props.foodItem.name} </h5>
           {/* <p className="card-text">This is </p> */}
@@ -73,3 +75,9 @@ export default function Card1(props) {
     </div>
   );
 }
+
+
+
+
+
+

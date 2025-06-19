@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

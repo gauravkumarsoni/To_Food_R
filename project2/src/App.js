@@ -1,4 +1,5 @@
 import { CartProvider } from './component/ContextReducer';
+import './App.css';
 
 
 import './App.css';
@@ -13,9 +14,10 @@ import MyOrder from './screen/MyOrder';
 
 function App() {
   return (
-    <CartProvider>
+    <div className="flex-body">
+ <CartProvider>
     <Router>
-    <div>
+    <div >
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -26,6 +28,8 @@ function App() {
     </div>
   </Router>
   </CartProvider>
+    </div>
+   
   );
 }
 
