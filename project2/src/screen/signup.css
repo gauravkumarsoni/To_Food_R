@@ -1,0 +1,9 @@
+.signups{
+  width: 750px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #abcde4;
+  justify-content: center;
+  align-items: center;
+}

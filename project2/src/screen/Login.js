@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import './signup.css';
 
 export default function Login() {
    const BACKEND_URL = process.env.REACT_APP_URL;
@@ -26,6 +27,7 @@ export default function Login() {
     }
 
     if (userData.success) {
+      alert("Login successful");
       localStorage.setItem("userEmail", crendintial.email );
       localStorage.setItem("authToken", userData.authToken);
 
@@ -39,7 +41,7 @@ export default function Login() {
   }
 
   return (
-        <div className='container'>
+        <div className='signups'>
     
           <form onSubmit={dbSubmit}>
            

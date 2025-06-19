@@ -15,9 +15,11 @@ export default function Card1(props) {
     for (const item of datas) {
       if (item.id === props.foodItem._id) {
         food = item;
+        //  alert("Add to cart successful");
         break;
       }
     }
+    alert("Add to cart successful");
     if (food !== []) {
       if (food.size === size) {
         await dispatch({ type: "UPDATE", id: props.foodItem._id, price: finalPrice, qty: qty })
@@ -65,7 +67,7 @@ export default function Card1(props) {
             </div>
           </div>
           <hr></hr>
-          <button className='btn btn-success justify-center ms-2' onClick={handleAddToCart}>Add to Cart</button>
+          <button className='btn btn-success justify-center ms-2 ' onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
     </div>

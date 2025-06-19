@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './signup.css';
 
 
 export default function Signup() {
@@ -24,6 +25,9 @@ export default function Signup() {
     if(!userData.success){
       alert("Enter valid carenditial");
     }
+    else{
+      alert("signup successful");
+    }
   
   }
   const toChange=(event)=>{
@@ -32,7 +36,7 @@ export default function Signup() {
   }
   
   return (
-    <div className='container'>
+    <div className=' signups'>
 
       <form onSubmit={dbSubmit}>
         <div className="mb-3">
